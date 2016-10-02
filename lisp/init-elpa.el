@@ -30,6 +30,12 @@
                                                 "http://melpa.org/packages/"
                                               "https://melpa.org/packages/")))
 
+;;; Prefer melpa-stable
+(add-to-list 'package-archives `("melpa-stable" . ,(if (< emacs-major-version 24)
+                                                       "http://stable.melpa.org/packages/"
+                                                     "https://stable.melpa.org/packages/")))
+(add-to-list 'package-archive-priorities '("melpa-stable" . 10))
+
 ;; NOTE: In case of MELPA problems, the official mirror URL is
 ;; https://www.mirrorservice.org/sites/stable.melpa.org/packages/
 
