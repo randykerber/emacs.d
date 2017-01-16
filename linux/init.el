@@ -25,18 +25,19 @@
 
 
 ;; ==================================================
-;; github version of init.el
-;; ==================================================
-
-(load "~/gh/randykerber/emacs.d/init.el")
-
-
-;; ==================================================
 ;; COMMON version of init.el
 ;; ==================================================
 
 (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
 (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
+
+
+;; ==================================================
+;; init.el that loads a bunch of init-* package dependencies.
+;; ==================================================
+
+(setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
+(load (concat *emacs-init-dir* "/" "init.el"))
 
 
 ;; ==================================================
