@@ -5,6 +5,10 @@
 
 (setq debug-on-error t)
 
+(setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
+
+(load custom-file)
+
 ;; (print (concat "system-type = " system-type))
 ;; (print "system-type =")
 ;; (print system-type)
@@ -43,11 +47,11 @@
 ;; ==================================================
 
 ;; key bindings
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq ns-alternate-modifier 'meta)
-  (setq ns-command-modifier 'alt)
-     ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-  )
+;; (when (eq system-type 'darwin) ;; mac specific settings
+;;   (setq ns-alternate-modifier 'meta)
+;;   (setq ns-command-modifier 'alt)
+;;      ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+;;   )
 
 
 ;; (print "END   brew/init.el")
