@@ -45,3 +45,6 @@ site-lisp/package/
 /anaconda-mode/
 /local/
 /logs/
+custom-w-packages.el
+custom-BU.el
+BU
