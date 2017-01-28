@@ -1,4 +1,4 @@
-(message "Loading ~/prj/emacs.d/list/init-local.el")
+;; (message "Loading ~/gh/randykerber/emacs.d/lisp/init-local.el")
 
 (require 'init-helm)
 

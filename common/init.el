@@ -20,14 +20,14 @@
 
 (global-font-lock-mode 1)
 
-;(add-hook 'after-init-hook
-;          '(lambda ()
-;             (global-font-lock-mode 1)
-;	     ;;; winter: uncomment
-;             ;; (require 'exec-path-from-shell)
-;             ))
+                                        ;(add-hook 'after-init-hook
+                                        ;          '(lambda ()
+                                        ;             (global-font-lock-mode 1)
+                                        ;	     ;;; winter: uncomment
+                                        ;             ;; (require 'exec-path-from-shell)
+                                        ;             ))
 
-;(require 'font-lock)
+                                        ;(require 'font-lock)
 
 
 ;;;;================================================================
@@ -37,7 +37,9 @@
 ;; (load-file (concat *preferences-dir* "keys.el"))
 ;; (load-init-file "keys.el")
 
-(load-file "~/gh/randykerber/emacs.d/common/keys.el")
+;; (load-file "~/gh/randykerber/emacs.d/common/keys.el")
+
+(load (concat *emacs-init-dir* "/" "common" "/" "keys.el"))
 
 
 ;;;;================================================================

@@ -1,7 +1,7 @@
-;;;; emacs brew init           -*- mode: emacs-lisp -*-
+;;;; emacs linux init           -*- mode: emacs-lisp -*-
 ;;
 
-(print "START brew/init.el")
+;; (print "START linux/init.el")
 
 (setq debug-on-error t)
 
@@ -25,7 +25,7 @@
 
 
 ;; ==================================================
-;; COMMON version of init.el
+;; init.el that loads a bunch of init-* package dependencies.
 ;; ==================================================
 
 (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
@@ -33,7 +33,7 @@
 
 
 ;; ==================================================
-;; init.el that loads a bunch of init-* package dependencies.
+;; COMMON version of init.el
 ;; ==================================================
 
 (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
@@ -48,8 +48,8 @@
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq ns-alternate-modifier 'meta)
   (setq ns-command-modifier 'alt)
-     ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+  ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
   )
 
 
-(print "END   brew/start.el")
+;; (print "END   linux/init.el")

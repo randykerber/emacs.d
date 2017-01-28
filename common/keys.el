@@ -1,6 +1,6 @@
 ;;;;                 -*- mode: emacs-lisp -*-
 
-(print "Loading common/keys.el ...")
+;; (print "Loading common/keys.el ...")
 
 (if (featurep 'aquamacs)
 
@@ -135,6 +135,6 @@
 ;; (global-set-key (kbd "M-g") 'goto-line)
 (rk-set-key (kbd "M-g") 'goto-line)
 
-(print "Loading init/keys.el ...Done")
+;; (print "Loading init/keys.el ...Done")
 
 ;;;;;;;;;;;;;;;;  END  ;;;;;;;;;;;;;;;;

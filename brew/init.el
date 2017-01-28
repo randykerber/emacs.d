@@ -1,9 +1,13 @@
 ;;;; emacs brew init           -*- mode: emacs-lisp -*-
 ;;
 
-(print "START brew/init.el")
+;; (print "START brew/init.el")
 
 (setq debug-on-error t)
+
+;; (print (concat "system-type = " system-type))
+;; (print "system-type =")
+;; (print system-type)
 
 ;; ==================================================
 ;; Packages
@@ -19,13 +23,9 @@
 
 ;; (setq custom-file "~/.emacs.d/brew/custom.el")
 
-;; (print (concat "system-type = " system-type))
-(print "system-type =")
-(print system-type)
-
 
 ;; ==================================================
-;; github version of init.el
+;; init.el that loads a bunch of init-* package dependencies.
 ;; ==================================================
 
 (load "~/gh/randykerber/emacs.d/init.el")
@@ -35,8 +35,6 @@
 ;; COMMON version of init.el
 ;; ==================================================
 
-;; (load-file "~/.emacs.d/common/init.el")
-(setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
 (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
 
 
@@ -52,4 +50,4 @@
   )
 
 
-(print "END   brew/init.el")
+;; (print "END   brew/init.el")

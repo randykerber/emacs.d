@@ -1,9 +1,17 @@
 ;;;; emacs aquamacs init           -*- mode: emacs-lisp -*-
 ;;
 
-(print "START aqua/init.el")
+;; (print "START aqua/init.el")
 
 (setq debug-on-error t)
+
+;; (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
+
+;; (print (concat "system-type = " system-type))
+;; (print "system-type =")
+;; (print system-type)
+
+;; (setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
 
 ;; (package-initialize)
 
@@ -21,13 +29,30 @@
 
 (aquamacs-set-line-wrapping-in-text-modes)
 
+
 ;; ==================================================
-;; ALL version of init.el
+;; init.el that loads a bunch of init-* package dependencies.
 ;; ==================================================
 
-(setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
+;; (load (concat *emacs-init-dir* "/" "init.el"))
+
+
+;; ==================================================
+;; COMMON version of init.el
+;; ==================================================
+
 (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
 
-;; (load-file "~/.emacs.d/common/init.el")
 
-(print "END   aqua/start.el")
+;; ==================================================
+;; Mac OS Modifier keys
+;; ==================================================
+
+;; key bindings
+;; (when (eq system-type 'darwin) ;; mac specific settings
+;;   ;; (setq ns-alternate-modifier 'meta)   ;; Behavior of the 'alt/option' key
+;;   (setq ns-command-modifier 'alt)
+;;      ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+;;   )
+
+;; (print "END   aqua/start.el")

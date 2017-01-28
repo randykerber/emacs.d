@@ -1,6 +1,6 @@
 ;;;; emacs init.el                -*- mode: emacs-lisp -*-
 
-(print "loading ~/.emacs.d/init.el")
+;; (print "loading ~/.emacs.d/init.el")
 
 (setq debug-on-error t)
 
@@ -15,8 +15,8 @@
 
 (print "features = ")
 (print features)
-(print "(featurep 'version-modified) = ")
-(print (featurep 'version-modified))
+;; (print "(featurep 'version-modified) = ")
+;; (print (featurep 'version-modified))
 
 
 (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
