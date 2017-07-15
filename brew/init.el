@@ -32,7 +32,7 @@
 ;; init.el that loads a bunch of init-* package dependencies.
 ;; ==================================================
 
-;; (load (concat *emacs-init-dir* "/" "init.el"))
+(load (concat *emacs-init-dir* "/" "init.el"))
 
 
 ;; ==================================================
