@@ -109,6 +109,7 @@
 ;; (require 'init-ruby-mode)
 ;; (require 'init-rails)
 (require 'init-sql)
+(require 'init-sparql)
 
 (require 'init-paredit)
 ;; (require 'init-lisp)
