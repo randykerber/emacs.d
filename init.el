@@ -112,7 +112,7 @@
 (require 'init-sparql)
 
 (require 'init-paredit)
-;; (require 'init-lisp)
+(require 'init-lisp)
 ;; (require 'init-slime)
 ;; (unless (version<= emacs-version "24.2")
 ;;   (require 'init-clojure)

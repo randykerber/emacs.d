@@ -6,6 +6,8 @@
 ;; (add-auto-mode 'gfm-mode "\\.\\(md\\|markdown\\|gfm\\)\\'")
 ;;; Markdown mode
 
+;;;; Following block is from:  http://superuser.com/questions/552888/auto-load-gfm-mode
+
 (autoload 'gfm-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.text$" . gfm-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.md$" . gfm-mode) auto-mode-alist))
