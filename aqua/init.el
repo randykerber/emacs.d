@@ -5,6 +5,12 @@
 
 (setq debug-on-error t)
 
+(setq initial-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
+
+(setq default-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
+
 ;; (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
 
 ;; (print (concat "system-type = " system-type))
