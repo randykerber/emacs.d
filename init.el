@@ -62,7 +62,7 @@
 (require 'init-grep)
 (require 'init-uniquify)
 (require 'init-ibuffer)
-(require 'init-flycheck)
+(require 'init-flycheck)  ;2017-11-24
 
 (require 'init-recentf)
 ;; (require 'init-smex)
