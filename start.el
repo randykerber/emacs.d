@@ -1,9 +1,6 @@
-;;;; emacs init.el                -*- mode: emacs-lisp -*-
-
-;; (print "loading ~/.emacs.d/init.el")
+;;;; emacs init                -*- mode: emacs-lisp -*-
 
 (setq debug-on-error t)
-
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -11,6 +8,7 @@
 ;; You may delete these explanatory comments.
 ;(package-initialize)
 
+;;(load "~/.emacs.d/start.el")
 ;; Have to add (provided 'emacs-modified) to Emacs.app installation for following to work.
 
 (print "features = ")
@@ -42,3 +40,5 @@
       )
 
 (load (concat *emacs-init-dir* "/" *emacs-context* "/" "init.el"))
+
+;;(add-to-list 'load-path "~/.emacs.d")
