@@ -21,9 +21,11 @@
     (("melpa-stable" . "https://stable.melpa.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
- '(package-selected-packages (quote (markdown-mode csv yaml-mode)))
+ '(package-selected-packages
+   (quote
+    (ensime rdf-prefix ttl-mode markdown-mode csv yaml-mode)))
  '(require-final-newline t)
- '(safe-local-variable-values (quote ((no-byte-compile . t))))
+ '(safe-local-variable-values (quote ((no-byte-compile t) (no-byte-compile . t))))
  '(scroll-conservatively 99)
  '(scroll-step 1)
  '(show-paren-mode t)
