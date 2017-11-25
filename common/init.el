@@ -91,4 +91,15 @@
 ;;              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 
+;;;;================================================================
+;;;;  Tramp
+;;;;================================================================
+
+(defun sudo ()
+  "Use TRAMP to `sudo' the current buffer" (interactive)
+  (when buffer-file-name
+    (find-alternate-file
+     (concat "/sudo:root@localhost:"
+             buffer-file-name))))
+
 ;(print "END   common/init.el")
