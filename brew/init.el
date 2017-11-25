@@ -5,7 +5,8 @@
 
 (setq debug-on-error t)
 
-(setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
+;; (setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
+(setq custom-file (concat user-emacs-directory "custom.el"))
 
 (load custom-file)
 
@@ -32,14 +33,14 @@
 ;; init.el that loads a bunch of init-* package dependencies.
 ;; ==================================================
 
-(load (concat *emacs-init-dir* "/" "init.el"))
+;; (load (concat *emacs-init-dir* "/" "init.el"))
 
 
 ;; ==================================================
 ;; COMMON version of init.el
 ;; ==================================================
 
-(load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
+;; (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
 
 
 ;; ==================================================

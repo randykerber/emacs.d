@@ -47,7 +47,7 @@
 ;; COMMON version of init.el
 ;; ==================================================
 
-(load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
+;; (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
 
 
 ;; ==================================================
