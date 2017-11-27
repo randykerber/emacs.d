@@ -1,11 +1,10 @@
-;;;; emacs default.el                -*- mode: emacs-lisp -*-
+;;;; emacs.d aqua default.el                -*- mode: emacs-lisp -*-
 
 ;; (print "loading aqua/default.el")
 
 (setq debug-on-error t)
 
-(setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
-
+;; (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
 
 ;; (setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
 
