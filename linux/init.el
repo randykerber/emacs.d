@@ -5,9 +5,22 @@
 
 (setq debug-on-error t)
 
-(setq custom-file (concat *emacs-init-dir* "/" "linux" "/" "custom.el"))
-
+(setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
 (load custom-file)
+
+;; (setq rk--elpa-dir (concat user-emacs-directory "elpa"))
+
+(load (concat *emacs-common-dir* "/" "boot-packages.el"))
+(load (concat *emacs-common-dir* "/" "packages.el"))
+(load (concat *emacs-common-dir* "/" "config.el"))
+(load (concat *emacs-common-dir* "/" "keys.el"))
+
+
+(setq initial-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
+
+(setq default-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
 
 ;; ==================================================
 ;; Packages
@@ -21,12 +34,6 @@
 
 ;; (aquamacs-set-line-wrapping-in-text-modes)
 
-;; (setq custom-file "~/.emacs.d/linux/custom.el")
-
-;; (print (concat "system-type = " system-type))
-;; (print "system-type =")
-;; (print system-type)
-
 
 ;; ==================================================
 ;; init.el that loads a bunch of init-* package dependencies.
@@ -39,7 +46,7 @@
 ;; COMMON version of init.el
 ;; ==================================================
 
-(load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
+;; (load (concat *emacs-init-dir* "/" "common" "/" "init.el"))
 
 
 ;; ==================================================

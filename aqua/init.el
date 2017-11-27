@@ -1,9 +1,20 @@
-;;;; emacs aquamacs init           -*- mode: emacs-lisp -*-
+;;;; emacs aqua init           -*- mode: emacs-lisp -*-
 ;;
 
 ;; (print "START aqua/init.el")
 
 (setq debug-on-error t)
+
+;; (setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
+;; (load custom-file)
+
+;; (setq rk--elpa-dir (concat user-emacs-directory "elpa"))
+
+(load (concat *emacs-common-dir* "/" "boot-packages.el"))
+(load (concat *emacs-common-dir* "/" "packages.el"))
+(load (concat *emacs-common-dir* "/" "config.el"))
+(load (concat *emacs-common-dir* "/" "keys.el"))
+
 
 (setq initial-frame-alist
       '((top . 0) (left . 0) (width . 240) (height . 71)))
@@ -11,23 +22,15 @@
 (setq default-frame-alist
       '((top . 0) (left . 0) (width . 240) (height . 71)))
 
-;; (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
-
 ;; (print (concat "system-type = " system-type))
 ;; (print "system-type =")
 ;; (print system-type)
-
-;; (setq custom-file (concat *emacs-init-dir* "/" "brew" "/" "custom.el"))
-
-;; (package-initialize)
 
 ;; ==================================================
 ;; Packages
 ;; ==================================================
 
 ;; (load-file "~/.emacs.d/aqua/packages.el")
-;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-
 
 ;; ==================================================
 ;; line wrapping

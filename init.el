@@ -2,6 +2,9 @@
 
 (setq debug-on-error t)
 
+;; (print "begin ~/gh/randykerber/emacs.d/init.el")
+
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -11,13 +14,15 @@
 ;;(load "~/.emacs.d/start.el")
 ;; Have to add (provided 'emacs-modified) to Emacs.app installation for following to work.
 
-(print "features = ")
-(print features)
+;; (print "features = ")
+;; (print features)
 ;; (print "(featurep 'version-modified) = ")
 ;; (print (featurep 'version-modified))
 
 
 (setq *emacs-init-dir* "~/gh/randykerber/emacs.d")
+
+(setq *emacs-common-dir* (concat *emacs-init-dir* "/" "common"))
 
 (setq *emacs-context*
       (cond ((featurep 'aquamacs)
@@ -39,12 +44,24 @@
              "brew"))
       )
 
-(setq user-emacs-directory (concat *emacs-init-dir* "/" *emacs-context* "/"))
+(setq *emacs-context-dir* (concat *emacs-init-dir* "/" *emacs-context*))
 
-(load (concat user-emacs-directory "init.el"))
+;; (print "user-emacs-directory = ")
+;; (print user-emacs-directory)
 
-(setq *emacs-common-dir* (concat *emacs-init-dir* "/" "common" "/"))
+(unless (equal *emacs-context* "aqua")
+  (setq user-emacs-directory (concat *emacs-context-dir* "/")))
 
-(load (concat *emacs-common-dir* "init.el"))
+(print "user-emacs-directory = ")
+(print user-emacs-directory)
+
+(let ((gc-cons-threshold (* 50 1024 1024)))
+
+  (load (concat *emacs-context-dir* "/" "init.el"))
+
+  (garbage-collect)
+  )
 
 ;;(add-to-list 'load-path "~/.emacs.d")
+
+;; (print "END   ~/gh/randykerber/emacs.d/init.el")
