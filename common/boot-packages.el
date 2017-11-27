@@ -2,9 +2,9 @@
 
 (setq debug-on-error t)
 
-(print "begin ~/gh/randykerber/emacs.d/common/boot-packages.el")
+;; (print "begin ~/gh/randykerber/emacs.d/common/boot-packages.el")
 
-(setq user-emacs-directory (concat *emacs-context-dir* "/"))
+;; (setq user-emacs-directory (concat *emacs-context-dir* "/"))
 
 (require 'package)
 (setq package-enable-at-startup nil)

@@ -2,11 +2,21 @@
 
 (require 'use-package)
 
+(use-package f)
+(use-package s)
+(use-package dash
+  ;; :mode "\\.el$" "\\.lisp$"
+)
+(use-package company)
+
 (use-package sparql-mode
              :mode "\\.sparql$" "\\.rq$")
 
 (use-package ttl-mode
              :mode "\\.ttl$" "\\.nt$")
+(use-package rdf-prefix
+             :mode "\\.ttl$" "\\.nt$" "\\.rdf$" "\\.owl$")
+
 ;; (use-package tidy)
 ;; (use-package sql-mode)
 ;;              :mode "\\.sql$"
@@ -57,18 +67,15 @@
 ;; paredit
 ;; pip
 ;; pkg-info
-(use-package rdf-prefix)
-(use-package f)
-(use-package s)
 ;; (use-package smex)
 
 
-(use-package osx-location)
+(use-package osx-location
+             :defer nil)
 (use-package magit-popup)
 ;; (use-package async)
-(use-package bash-completion)
-(use-package dash)
-;; (use-package company)
+(use-package bash-completion
+             :mode "\\.sh$")
 ;; (use-package epl)
 ;; (use-package eshell)
 ;; (use-package flycheck)
@@ -76,9 +83,10 @@
 ;; (use-package slime)
 ;; (use-package tablist)
 ;; (use-package yasnippet)
-(use-package csv
-             :mode "\\.csv$" "\\.tsv$")
+             
 ;; (use-package flycheck-scala-sbt)
+
+
 (use-package ruby-mode
              :mode "\\.rb$"
              :interpreter "ruby")
@@ -93,8 +101,8 @@
                           (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
 ;; (use-package org)
 ;; (use-package helm)
-(use-package ivy
-             :ensure t)
+;; (use-package ivy
+;;              :ensure t)
 
 (use-package tramp
              :config
@@ -153,3 +161,16 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "PATH")
   )
+
+;; (use-package csv-mode
+;;              :mode "\\.csv$" "\\.tsv$"
+;;              :config
+;;              (setq csv-separators '("," ";" "|" " " "	")))
+;; (use-package csv-nav
+;;              :mode "\\.csv$" "\\.tsv$"
+;;              :config
+;;              (setq csv-separators '("," ";" "|" " " "	")))
+(use-package csv
+             :mode "\\.csv$" "\\.tsv$"
+             :config
+             (setq csv-separators '("," ";" "|" " " "	")))
