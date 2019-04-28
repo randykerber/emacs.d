@@ -5,8 +5,9 @@
 
 (setq debug-on-error t)
 
-;; (setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
-;; (load custom-file)
+(unless (equal *emacs-context* "aqua")
+  (setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
+  (load custom-file))
 
 ;; (setq rk--elpa-dir (concat user-emacs-directory "elpa"))
 
@@ -36,7 +37,8 @@
 ;; line wrapping
 ;; ==================================================
 
-(aquamacs-set-line-wrapping-in-text-modes)
+(when (equal *emacs-context* "aqua")
+  (aquamacs-set-line-wrapping-in-text-modes))
 
 
 ;; ==================================================
@@ -61,7 +63,7 @@
 ;; (when (eq system-type 'darwin) ;; mac specific settings
 ;;   ;; (setq ns-alternate-modifier 'meta)   ;; Behavior of the 'alt/option' key
 ;;   (setq ns-command-modifier 'alt)
-;;      ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+;;   ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 ;;   )
 
 ;; (print "END   aqua/start.el")

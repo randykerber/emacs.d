@@ -5,8 +5,9 @@
 
 (setq debug-on-error t)
 
-(setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
-(load custom-file)
+(unless (equal *emacs-context* "aqua")
+  (setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
+  (load custom-file))
 
 ;; (setq rk--elpa-dir (concat user-emacs-directory "elpa"))
 
@@ -22,6 +23,10 @@
 (setq default-frame-alist
       '((top . 0) (left . 0) (width . 240) (height . 71)))
 
+;; (print (concat "system-type = " system-type))
+;; (print "system-type =")
+;; (print system-type)
+
 ;; ==================================================
 ;; Packages
 ;; ==================================================
@@ -32,7 +37,8 @@
 ;; line wrapping
 ;; ==================================================
 
-;; (aquamacs-set-line-wrapping-in-text-modes)
+(when (equal *emacs-context* "aqua")
+  (aquamacs-set-line-wrapping-in-text-modes))
 
 
 ;; ==================================================
@@ -55,10 +61,9 @@
 
 ;; key bindings
 ;; (when (eq system-type 'darwin) ;; mac specific settings
-;;   (setq ns-alternate-modifier 'meta)
+;;   ;; (setq ns-alternate-modifier 'meta)   ;; Behavior of the 'alt/option' key
 ;;   (setq ns-command-modifier 'alt)
 ;;   ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 ;;   )
-
 
 ;; (print "END   linux/init.el")

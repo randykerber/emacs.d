@@ -30,16 +30,16 @@
 
             ;; ((featurep 'emacs-modified)
             ;;  "mod")
-            
+
             ;; ((featurep 'version-modified)
             ;;  "mod")
-            
+
             ((string-match "linux" (symbol-name system-type))
              "linux")
-            
+
             ((featurep 'linux)
              "linux")
-            
+
             (t
              "brew"))
       )
