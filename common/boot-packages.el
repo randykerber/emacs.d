@@ -8,12 +8,32 @@
 
 (require 'package)
 (setq package-enable-at-startup nil)
-(setq package-archives '(
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
-                         ("org"         . "http://orgmode.org/elpa/")
-                         ;; ("melpa" . "https://melpa.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")))
+(setq package-archives (if (is-aqua)
+                           '(
+                             ("melpa-stable" . "http://stable.melpa.org/packages/")
+                             ;; ("melpa"        . "https://melpa.org/packages/")
+                             ("melpa"        . "http://melpa.org/packages/")
+                             ("gnu"          . "http://elpa.gnu.org/packages/"))
+                         '(
+                           ("melpa-stable" . "http://stable.melpa.org/packages/")
+                           ("org"          . "http://orgmode.org/elpa/")
+                           ;; ("melpa"        . "https://melpa.org/packages/")
+                           ("melpa"        . "http://melpa.org/packages/")
+                           ("gnu"          . "http://elpa.gnu.org/packages/"))
+                         ))
+
+(setq package-archive-priorities
+      (if (is-aqua)
+          '(("melpa-stable" . 20)
+            ("elpa" . 10)
+            ("melpa" . 0)
+            )
+        '(("melpa-stable" . 20)
+          ("org" . 30)
+          ("elpa" . 10)
+          ("melpa" . 0)
+          )
+        ))
 
 (package-initialize)
 
