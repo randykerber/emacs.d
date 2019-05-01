@@ -41,6 +41,18 @@
 (print (concat "user-emacs-directory = " user-emacs-directory))
 
 
+(unless (is-aqua)
+  (setq custom-file (concat *emacs-context-dir* "/" "custom.el"))
+  (load custom-file))
+
+;; (setq rk--elpa-dir (concat user-emacs-directory "elpa"))
+
+(load (concat *emacs-common-dir* "/" "boot-packages.el"))
+(load (concat *emacs-common-dir* "/" "packages.el"))
+(load (concat *emacs-common-dir* "/" "config.el"))
+(load (concat *emacs-common-dir* "/" "keys.el"))
+
+
 ;;;;================================================================
 ;;;;  Keys
 ;;;;================================================================
