@@ -37,17 +37,27 @@
 
 (package-initialize)
 
-;; Bootstrap `use-package'
+;;;;================================================================
+;;;; use-package install
+;;;;================================================================
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-(eval-when-compile
-  (require 'use-package))
 
-;;; From end of: https://github.com/jwiegley/use-package
-(require 'diminish) ;; if you use :diminish
-(require 'bind-key) ;; if you use any :bind variant
+;;;;================================================================
+;;;; paradox
+;;;;================================================================
 
-(setq use-package-always-ensure t)
-(setq use-package-always-defer t)
+;;(use-package paradox
+;;   :demand t
+;;   :config
+;;   (paradox-enable)
+;;   )
+;; (require 'paradox)
+;; (paradox-enable)
+
+;;;;================================================================
+
+;;(print "END ~/gh/randykerber/emacs.d/common/boot-packages.el")
