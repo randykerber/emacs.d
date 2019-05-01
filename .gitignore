@@ -49,3 +49,6 @@ BU
 brew/elpa
 linux/elpa
 init-BU.el
+places
+Packages
+tramp
