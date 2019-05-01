@@ -3,7 +3,6 @@
 /auto-save-list
 /.session
 /session.*
-/custom.el
 *.elc
 CVS
 .svn
@@ -44,10 +43,9 @@ site-lisp/package/
 /anaconda-mode/
 /local/
 /logs/
-custom-w-packages.el
 custom-BU.el
 BU
-/elpa
+/old/
 brew/elpa
 linux/elpa
 init-BU.el
