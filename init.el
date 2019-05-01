@@ -24,20 +24,10 @@
 
 (setq *emacs-common-dir* (concat *emacs-init-dir* "/" "common"))
 
-(setq *emacs-context-dir* (concat *emacs-init-dir* "/" *emacs-context*))
-
-;; (print "user-emacs-directory = ")
-;; (print user-emacs-directory)
-
-(unless (equal *emacs-context* "aqua")
-  (setq user-emacs-directory (concat *emacs-context-dir* "/")))
-
-(print "user-emacs-directory = ")
-(print user-emacs-directory)
-
 (let ((gc-cons-threshold (* 50 1024 1024)))
 
-  (load (concat *emacs-context-dir* "/" "init.el"))
+  ;; (load (concat *emacs-context-dir* "/" "init.el"))
+  (load (concat *emacs-common-dir* "/" "init.el"))
 
   (garbage-collect)
   )

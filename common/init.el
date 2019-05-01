@@ -30,6 +30,16 @@
 (defun is-linux () (equal *emacs-context* "linux"))
 (defun is-mac () (or (is-brew) (is-aqua)))
 
+(setq *emacs-context-dir* (concat *emacs-init-dir* "/" *emacs-context*))
+
+;; (print "user-emacs-directory = ")
+;; (print user-emacs-directory)
+
+(unless (is-aqua)
+  (setq user-emacs-directory (concat *emacs-context-dir* "/")))
+
+(print (concat "user-emacs-directory = " user-emacs-directory))
+
 
 ;;;;================================================================
 ;;;;  Keys
