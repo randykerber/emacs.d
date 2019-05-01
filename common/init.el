@@ -5,7 +5,25 @@
 (setq debug-on-error t)
 
 
-;; (load (concat *emacs-init-dir* "/" "common" "/" "packages.el"))
+(setq *emacs-context*
+      (cond ((featurep 'aquamacs)
+             "aqua")
+
+            ;; ((featurep 'emacs-modified)
+            ;;  "mod")
+
+            ;; ((featurep 'version-modified)
+            ;;  "mod")
+
+            ((string-match "linux" (symbol-name system-type))
+             "linux")
+
+            ((featurep 'linux)
+             "linux")
+
+            (t
+             "brew"))
+      )
 
 ;; (load (concat *emacs-init-dir* "/" "common" "/" "config.el"))
 

@@ -24,26 +24,6 @@
 
 (setq *emacs-common-dir* (concat *emacs-init-dir* "/" "common"))
 
-(setq *emacs-context*
-      (cond ((featurep 'aquamacs)
-             "aqua")
-
-            ;; ((featurep 'emacs-modified)
-            ;;  "mod")
-
-            ;; ((featurep 'version-modified)
-            ;;  "mod")
-
-            ((string-match "linux" (symbol-name system-type))
-             "linux")
-
-            ((featurep 'linux)
-             "linux")
-
-            (t
-             "brew"))
-      )
-
 (setq *emacs-context-dir* (concat *emacs-init-dir* "/" *emacs-context*))
 
 ;; (print "user-emacs-directory = ")
