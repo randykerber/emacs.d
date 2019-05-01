@@ -54,10 +54,24 @@
 
 
 ;;;;================================================================
-;;;;  Keys
+;;;;  Window
 ;;;;================================================================
 
-;; (load (concat *emacs-init-dir* "/" "common" "/" "keys.el"))
 
+(setq initial-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
+
+(setq default-frame-alist
+      '((top . 0) (left . 0) (width . 240) (height . 71)))
+
+
+;;;;================================================================
+;;;;  Server
+;;;;================================================================
+
+;; INIT DAEMON SERVER
+;;(require 'server)
+;;(unless (server-running-p)
+;;  (server-start))
 
 ;(print "END   common/init.el")
