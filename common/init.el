@@ -25,7 +25,11 @@
              "brew"))
       )
 
-;; (load (concat *emacs-init-dir* "/" "common" "/" "config.el"))
+(defun is-aqua () (equal *emacs-context* "aqua"))
+(defun is-brew () (equal *emacs-context* "brew"))
+(defun is-linux () (equal *emacs-context* "linux"))
+(defun is-mac () (or (is-brew) (is-aqua)))
+
 
 ;;;;================================================================
 ;;;;  Keys
