@@ -142,8 +142,6 @@
 ;; (use-package org)
 ;; (use-package helm)
 
-(use-package ivy)
-
 (use-package tramp
              :config
              (defun sudo ()
@@ -201,6 +199,13 @@
   ;;(setq global-auto-revert-non-file-buffers t)
   ;;(setq auto-revert-verbose nil)
   )
+
+(use-package dired-x
+  :disabled)
+
+(use-package ivy
+  :disabled)
+
 
 (use-package smartparens
   :demand t
