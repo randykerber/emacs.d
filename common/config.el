@@ -5,6 +5,29 @@
 (setq debug-on-error t)
 
 
+;;(require 'better-defaults)
+
+(when (is-mac)
+  (setq
+   ns-auto-hide-menu-bar t
+   ;; ns-tool-bar-display-mode (quote both) t
+   ;; ns-tool-bar-size-mode (quote regular) t
+   ))
+
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
+(setq dired-dwim-target t
+      fill-column 96
+      font-lock-global-modes t
+      indent-tabs-mode nil
+      next-line-add-newlines t
+      require-final-newline t
+      tab-width 4
+      track-eol t
+      user-mail-address "randy@randykerber.com"
+      )
+
 ;;;
 ;;; Nice options to have On by default
 ;;;
@@ -29,6 +52,14 @@
                                         ;             ))
 
                                         ;(require 'font-lock)
+
+
+;; ==================================================
+;; line wrapping
+;; ==================================================
+
+(when (is-aqua)
+  (aquamacs-set-line-wrapping-in-text-modes))
 
 
 ;;;;================================================================
