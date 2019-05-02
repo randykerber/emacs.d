@@ -38,12 +38,12 @@
 ;; (smart-spacing-mode t)
 ;; (add-hook 'text-mode-hook 'smart-spacing-mode)
 
-(remove-hook 'text-mode-hook 'smart-spacing-mode)
-(remove-hook 'text-mode-hook 'auto-detect-wrap)
-(add-hook 'text-mode-hook 'turn-on-auto-fill) ; wrap long lines in text mode
-(add-hook 'text-mode-hook 'turn-on-word-wrap)
+;; (remove-hook 'text-mode-hook 'smart-spacing-mode)
+;; (remove-hook 'text-mode-hook 'auto-detect-wrap)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill) ; wrap long lines in text mode
+;; (add-hook 'text-mode-hook 'turn-on-word-wrap)
 
-(format "text mode hook = %S" text-mode-hook)
+;; (print (format "text mode hook = %S" text-mode-hook))
 
 
 ;; ==================================================
@@ -61,7 +61,7 @@
 ;;;;  dired
 ;;;;================================================================
 
-(require 'dired-x)
+;; (require 'dired-x)
 
 
 ;;;;================================================================
@@ -69,7 +69,7 @@
 ;;;;================================================================
 
 ;; (require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; Unlike python-mode, this mode follows the Emacs convention of not
 ;; binding the ENTER key to `newline-and-indent'.  To get this
@@ -84,11 +84,19 @@
 ;;;;  Tramp
 ;;;;================================================================
 
-(defun sudo ()
-  "Use TRAMP to `sudo' the current buffer" (interactive)
-  (when buffer-file-name
-    (find-alternate-file
-     (concat "/sudo:root@localhost:"
-             buffer-file-name))))
+;; (defun sudo ()
+;;   "Use TRAMP to `sudo' the current buffer" (interactive)
+;;   (when buffer-file-name
+;;     (find-alternate-file
+;;      (concat "/sudo:root@localhost:"
+;;              buffer-file-name))))
 
+;;;;================================================================
+;;;; smart-mode-line
+;;;;================================================================
+
+;; (sml/setup)
+
+;;;;================================================================
+;;;;================================================================
 ;(print "END   common/config.el")
