@@ -1,4 +1,3 @@
-
 ;;; FiraCode font with ligatures
 ;;;
 ;;; From:  https://github.com/tonsky/FiraCode/wiki/Setting-up-Emacs
@@ -38,3 +37,5 @@
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 (provide 'init-fira)
+
+;;; init-fira.el ends here
