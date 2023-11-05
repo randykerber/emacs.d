@@ -1,7 +1,7 @@
 ;;;; emacs brew init           -*- mode: emacs-lisp -*-
 ;;
 
-;; (print "START brew/init.el")
+(print "START brew/init.el")
 
 (setq debug-on-error t)
 
@@ -66,4 +66,4 @@
 ;;   ;; (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 ;;   )
 
-;; (print "END   brew/init.el")
+(print "END   brew/init.el")

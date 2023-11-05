@@ -1,6 +1,6 @@
 ;;;; emacs.d brew default.el                -*- mode: emacs-lisp -*-
 
-;; (print "loading brew/default.el")
+(print "loading brew/default.el")
 
 (setq debug-on-error t)
 
@@ -11,4 +11,4 @@
 (load (concat *emacs-init-dir* "/" "common" "/" "default.el"))
 
 
-;; (print "END   brew/default.el")
+(print "END   brew/default.el")
