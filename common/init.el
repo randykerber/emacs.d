@@ -1,6 +1,6 @@
 ;;;; emacs common init                -*- mode: emacs-lisp -*-
 
-;(print "START common/init.el")
+(print "START common/init.el")
 
 (setq debug-on-error t)
 
@@ -38,7 +38,7 @@
 (unless (is-aqua)
   (setq user-emacs-directory (concat *emacs-context-dir* "/")))
 
-(print (concat "user-emacs-directory = " user-emacs-directory))
+;; (print (concat "user-emacs-directory = " user-emacs-directory))
 
 
 (unless (is-aqua)
@@ -74,4 +74,4 @@
 ;;(unless (server-running-p)
 ;;  (server-start))
 
-;(print "END   common/init.el")
+(print "END   common/init.el")

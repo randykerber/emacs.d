@@ -55,10 +55,10 @@
 (use-package sparql-mode
              :mode "\\.sparql$" "\\.rq$")
 
-(use-package ttl-mode
-             :mode "\\.ttl$" "\\.nt$")
-(use-package rdf-prefix
-             :mode "\\.ttl$" "\\.nt$" "\\.rdf$" "\\.owl$")
+;;(use-package ttl-mode
+;;             :mode "\\.ttl$" "\\.nt$")
+;;(use-package rdf-prefix
+;;             :mode "\\.ttl$" "\\.nt$" "\\.rdf$" "\\.owl$")
 
 ;; (use-package tidy)
 ;; (use-package sql-mode)
@@ -137,8 +137,9 @@
              :mode ("\\.yml$" "\\.yaml$")
              :init
              (add-hook 'yaml-mode-hook
-                       '(lambda ()
-                          (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
+                       #'(lambda ()
+                           (define-key yaml-mode-map "\C-m"
+                            'newline-and-indent))))
 ;; (use-package org)
 ;; (use-package helm)
 
@@ -209,7 +210,7 @@
 
 (use-package smartparens
   :demand t
-  :init (smartparens-global-mode 1)
+  :config (smartparens-global-mode 1)
   :diminish smartparens-mode
   )
 

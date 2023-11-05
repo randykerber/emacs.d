@@ -1,6 +1,6 @@
 ;;;; emacs.d common config.el                -*- mode: emacs-lisp -*-
 
-;(print "START common/init.el")
+(print "START common/init.el")
 
 (setq debug-on-error t)
 
@@ -27,6 +27,8 @@
       track-eol t
       user-mail-address "randy@randykerber.com"
       )
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;;
 ;;; Nice options to have On by default
@@ -130,4 +132,5 @@
 
 ;;;;================================================================
 ;;;;================================================================
-;(print "END   common/config.el")
+
+(print "END   common/config.el")
