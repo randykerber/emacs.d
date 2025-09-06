@@ -24,7 +24,7 @@
   ;; :preface (provide 'text-mode)
   ;; :mode (("\\.txt\\'" . text-mode)
   ;;        ("\\.log\\'" . text-mode))
-  :mode "\\.txt$"
+  :mode ("\\.txt$" . text-mode)
   ;; :hook (turn-on-word-wrap
   ;;        turn-on-auto-fill)
   ;; :config
@@ -53,7 +53,7 @@
 (use-package company)
 
 (use-package sparql-mode
-             :mode "\\.sparql$" "\\.rq$")
+             :mode (("\\.sparql$" . sparql-mode) ("\\.rq$" . sparql-mode)))
 
 ;;(use-package ttl-mode
 ;;             :mode "\\.ttl$" "\\.nt$")
@@ -65,7 +65,7 @@
 ;;              :mode "\\.sql$"
 ;;              :interpreter "sql")
 (use-package sql-indent
-             :mode "\\.sql$")
+             :mode ("\\.sql$" . sql-mode))
 ;; (use-package sql-ident)
 ;; sqlite
 
@@ -111,7 +111,7 @@
 ;; (use-package async)
 
 (use-package bash-completion
-             :mode ("\\.sh$" "\\.bash$")
+             :mode (("\\.sh$" . sh-mode) ("\\.bash$" . sh-mode))
              )
 
 (use-package eshell)
@@ -134,7 +134,7 @@
 ;; (use-package ensime)
 
 (use-package yaml-mode
-             :mode ("\\.yml$" "\\.yaml$")
+             :mode (("\\.yml$" . yaml-mode) ("\\.yaml$" . yaml-mode))
              :init
              (add-hook 'yaml-mode-hook
                        #'(lambda ()
@@ -231,10 +231,15 @@
 ;;              :config
 ;;              (setq csv-separators '("," ";" "|" " " "	")))
 
-(use-package csv
-             :mode ("\\.csv$" "\\.tsv$")
+(use-package csv-mode
+             :defer t
+             :mode (("\.csv$" . csv-mode) ("\.tsv$" . csv-mode))
              :config
              (setq csv-separators '("," ";" "|" " " "	"))
+             ;; Disable flyspell in CSV files (data, not text)
+             (add-hook 'csv-mode-hook (lambda () 
+                                        (flyspell-mode -1)
+                                        (remove-hook 'text-mode-hook 'turn-on-flyspell t)))
              )
 
 ;;(use-package smart-mode-line
