@@ -12,7 +12,12 @@
  '(ns-auto-hide-menu-bar t)
  '(ns-command-modifier 'alt)
  '(package-selected-packages
-   '(json-reformat diminish csv elpy ivy yaml-mode rdf-prefix sparql-mode company use-package whole-line-or-region whitespace-cleanup-mode which-key sql-indent smartparens pkg-info osx-location markdown-mode json-mode exec-path-from-shell better-defaults bash-completion))
+   '(bash-completion better-defaults company csv csv-mode diminish elpy
+                     exec-path-from-shell ivy json-mode json-reformat
+                     markdown-mode osx-location pkg-info rdf-prefix
+                     smartparens sparql-mode sql-indent use-package
+                     which-key whitespace-cleanup-mode
+                     whole-line-or-region yaml-mode))
  '(safe-local-variable-values '((no-byte-compile t) (no-byte-compile . t)))
  '(scroll-conservatively 99)
  '(scroll-step 1)
