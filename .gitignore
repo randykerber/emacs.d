@@ -28,7 +28,8 @@ site-lisp/package/
 /frame-restore-parameters
 /.achievements
 /.bookmarks.el
-/history
+**/history
+brew/history
 /helm-adaptive-history
 /thumbs/
 /emms/
@@ -39,7 +40,8 @@ site-lisp/package/
 /.sx/
 /org-clock-save.el
 /ditaa*.jar
-/ido.last
+**/ido.last
+brew/ido.last
 /recentf
 /viper
 /projectile-bookmarks.eld
