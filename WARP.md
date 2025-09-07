@@ -153,6 +153,10 @@ The configuration provides enhanced support for:
 - **macOS**: Command key handling optimized for Homebrew Emacs
 - **Function Keys**: Meta-F12 for Magit status
 
+### File Creation with ido-mode
+- **Creating new files**: Use `C-x C-f` then `C-j` to force creation of exact filename
+- **Alternative**: Use `C-f` during file selection to drop into regular find-file mode
+
 ## Development and Customization
 
 ### Adding New Configuration
