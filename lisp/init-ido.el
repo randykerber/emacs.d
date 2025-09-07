@@ -5,6 +5,10 @@
 (setq ido-use-filename-at-point nil)
 (setq ido-auto-merge-work-directories-length -1)
 (setq ido-use-virtual-buffers t)
+;; Make it easier to create new files
+(setq ido-create-new-buffer 'always)
+(setq ido-file-extensions-order '(".txt" ".el" ".md" ".csv" ".py" ".rb"))
+(setq ido-confirm-unique-completion t)
 (setq-default org-completion-use-ido t)
 (setq-default magit-completing-read-function 'magit-ido-completing-read)
 
