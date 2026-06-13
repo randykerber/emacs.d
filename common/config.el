@@ -97,6 +97,16 @@
 
 ;; (require 'dired-x)
 
+;; r = rename in current directory (ignores dired-dwim-target / other window).
+;; R = rename/move with DWIM default (other dired window), as usual.
+(with-eval-after-load 'dired
+  (defun rk-dired-rename-in-place ()
+    "Rename dired file, defaulting to current directory regardless of other windows."
+    (interactive)
+    (let ((dired-dwim-target nil))
+      (call-interactively #'dired-do-rename)))
+  (define-key dired-mode-map (kbd "r") #'rk-dired-rename-in-place))
+
 
 ;;;;================================================================
 ;;;;  YAML
