@@ -1,6 +1,6 @@
 ;;;; emacs init                -*- mode: emacs-lisp -*-
 
-(setq debug-on-error t)
+;; (setq debug-on-error t)  ; debug only — do not leave enabled
 
 ;; (print "begin ~/gh/randykerber/emacs.d/init.el")
 

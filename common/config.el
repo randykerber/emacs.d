@@ -10,6 +10,7 @@
 (when (is-mac)
   (setq
    ns-auto-hide-menu-bar t
+   ns-alternate-modifier 'meta  ; Emacs 30: explicitly map Option → Meta (M-) so M-o etc. work
    ;; ns-tool-bar-display-mode (quote both) t
    ;; ns-tool-bar-size-mode (quote regular) t
    ))

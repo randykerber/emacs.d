@@ -2,7 +2,7 @@
 
 (print "START common/init.el")
 
-(setq debug-on-error t)
+;; (setq debug-on-error t)  ; debug only — do not leave enabled
 
 
 (setq *emacs-context*
