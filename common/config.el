@@ -2,8 +2,7 @@
 
 (print "START common/init.el")
 
-(setq debug-on-error t)
-
+;; (setq debug-on-error t)  ; debug only — do not leave enabled
 
 ;;(require 'better-defaults)
 
@@ -11,6 +10,7 @@
   (setq
    ns-auto-hide-menu-bar t
    ns-alternate-modifier 'meta  ; Emacs 30: explicitly map Option → Meta (M-) so M-o etc. work
+   insert-directory-program "gls"  ; GNU ls (coreutils) supports --dired
    ;; ns-tool-bar-display-mode (quote both) t
    ;; ns-tool-bar-size-mode (quote regular) t
    ))
