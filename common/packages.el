@@ -83,9 +83,10 @@
   :init (setq markdown-command "multimarkdown")
   :config
   ;; Enable org-table minor mode in markdown for auto-aligned pipe tables.
-  ;; Tab in a table cell auto-aligns all columns. Built-in, no package needed.
-  (add-hook 'gfm-mode-hook 'orgtbl-mode)
-  (add-hook 'markdown-mode-hook 'orgtbl-mode))
+  (require 'org-table nil t)
+  (when (fboundp 'orgtbl-mode)
+    (add-hook 'gfm-mode-hook #'orgtbl-mode)
+    (add-hook 'markdown-mode-hook #'orgtbl-mode)))
 
 
 ;; (use-package gfm-mode
