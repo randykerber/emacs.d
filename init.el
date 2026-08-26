@@ -1,4 +1,4 @@
-;;;; emacs init                -*- mode: emacs-lisp -*-
+;;;; emacs init                -*- mode: emacs-lisp; lexical-binding: t; -*-
 
 ;; (setq debug-on-error t)  ; debug only — do not leave enabled
 

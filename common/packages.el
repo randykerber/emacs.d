@@ -1,4 +1,4 @@
-;;;; emacs common init                -*- mode: emacs-lisp -*-
+;;;; emacs common init                -*- mode: emacs-lisp; lexical-binding: t; -*-
 
 (eval-when-compile
   (require 'use-package))
@@ -69,7 +69,7 @@
 ;; (use-package sql-ident)
 ;; sqlite
 
-(use-package pkg-info)
+;; pkg-info + its dep epl removed 2026-08-26 — long-obsolete, nothing needs them
 ;; (use-package magit)
 
 

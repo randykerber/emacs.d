@@ -1,4 +1,4 @@
-;;;; emacs common init                -*- mode: emacs-lisp -*-
+;;;; emacs common init                -*- mode: emacs-lisp; lexical-binding: t; -*-
 
 (print "START common/init.el")
 

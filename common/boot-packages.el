@@ -1,4 +1,4 @@
-;;;; emacs.d / common / boot-packages.el              -*- mode: emacs-lisp -*-
+;;;; emacs.d / common / boot-packages.el              -*- mode: emacs-lisp; lexical-binding: t; -*-
 
 (setq debug-on-error t)
 
