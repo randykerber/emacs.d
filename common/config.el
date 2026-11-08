@@ -1,6 +1,6 @@
 ;;;; emacs.d common config.el                -*- mode: emacs-lisp; lexical-binding: t; -*-
 
-(print "START common/init.el")
+(print "START common/config.el")
 
 ;; (setq debug-on-error t)  ; debug only — do not leave enabled
 
