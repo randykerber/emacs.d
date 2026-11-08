@@ -8,6 +8,15 @@
 
 ;;; Code:
 
+;; macOS 27 fix (2026-11-08): the emacs-app bundle's libgccjit computes a bogus
+;; deployment target ("18.0") from the Darwin version, and clang 21 rejects it,
+;; so every native compilation fails. An explicit MACOSX_DEPLOYMENT_TARGET
+;; overrides the broken computation. Derived from sw_vers so future macOS
+;; upgrades don't need an edit. Remove when a fixed emacs-app build ships.
+(when (eq system-type 'darwin)
+  (setenv "MACOSX_DEPLOYMENT_TARGET"
+          (string-trim (shell-command-to-string "sw_vers -productVersion"))))
+
 (setq package-enable-at-startup nil)
 ;; package-load-list
 ;; package-user-dir
